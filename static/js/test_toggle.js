@@ -80,43 +80,42 @@ const insiderIntegration = {
                 </div>
             </div>
             <div class="form-group">
+                <form autocomplete="off">
+                    <h9>Tech stack</h9>
+                    <p>
+                        <h13>Technology specification</h13>
+                    </p>
+                    <div class="d-flex mb-3">
+                        <select v-model="tech" class="selectpicker bootstrap-select__b flex-grow-1" data-style="btn">
+                            <option value="csharp">Csharp</option>
+                            <option value="android">Android</option>
+                            <option value="ios">IOS</option>
+                            <option value="javascript">Javascript</option>
+                        </select>
+                    </div>
+                    <div class="invalid-feedback">[[ error.tech ]]</div>
 
-                <h9>Tech stack</h9>
-                <p>
-                    <h13>Technology specification</h13>
-                </p>
-                <div class="d-flex mb-3">
-                    <select v-model="tech" class="selectpicker bootstrap-select__b flex-grow-1" data-style="btn">
-                        <option value="csharp">Csharp</option>
-                        <option value="android">Android</option>
-                        <option value="ios">IOS</option>
-                        <option value="javascript">Javascript</option>
-                    </select>
-                </div>
-                <div class="invalid-feedback">[[ error.tech ]]</div>
-
-                <h9>Save intermediates to</h9>
-                <p>
-                    <h13>Optional</h13>
-                </p>
-                <input type="text" class="form-control form-control-alternative"
-                    placeholder=""
-                    v-model="save_intermediates_to"
-                    :class="{ 'is-invalid': error.save_intermediates_to }">
-                <div class="invalid-feedback">[[ error.save_intermediates_to ]]</div>
-            
-                <h9>Timeout</h9>
-                <p>
-                    <h13>Optional</h13>
-                </p>
-                <input type="number" class="form-control form-control-alternative"
-                    placeholder=""
-                    v-model="timeout"
-                    :class="{ 'is-invalid': error.timeout }"
-                >
-                <div class="invalid-feedback">[[ error.timeout ]]</div>
-
-
+                    <h9>Save intermediates to</h9>
+                    <p>
+                        <h13>Optional</h13>
+                    </p>
+                    <input type="text" class="form-control form-control-alternative"
+                        placeholder=""
+                        v-model="save_intermediates_to"
+                        :class="{ 'is-invalid': error.save_intermediates_to }">
+                    <div class="invalid-feedback">[[ error.save_intermediates_to ]]</div>
+                
+                    <h9>Timeout</h9>
+                    <p>
+                        <h13>Optional</h13>
+                    </p>
+                    <input type="number" class="form-control form-control-alternative"
+                        placeholder=""
+                        v-model="timeout"
+                        :class="{ 'is-invalid': error.timeout }"
+                    >
+                    <div class="invalid-feedback">[[ error.timeout ]]</div>
+                </form>
             </div>
         </div>
     `
